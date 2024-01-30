@@ -1,0 +1,64 @@
+//Criar categoria
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "Category 3",
+    "description": "Category 3 description"
+}
+
+
+###
+
+//TODO - Checar |  Trazer categoria por ID
+GET http://localhost:8080/category/6d943dc8-e7c1-468e-81af-2b40db88fd75 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+// Listar categorias
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+// Criar produtos
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "name": "Product 2",
+    "description": "Produto 2 ",
+    "price": 100.00,
+    "image_url": "http://google.com",
+    "category_id": "6d943dc8-e7c1-468e-81af-2b40db88fd75"
+    
+}
+
+###
+
+// Listar todos os produtos
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+//TODO - Checar |  Listar os produtos por categoria
+GET http://localhost:8080/product/category/6d943dc8-e7c1-468e-81af-2b40db88fd75 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+//TODO - Checar | Listar o produto pelo ID
+GET http://localhost:8080/product/805e1f04-8f9b-4780-8454-12543660e3c2 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
